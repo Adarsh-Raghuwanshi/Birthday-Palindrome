@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap");
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Merienda", cursive;
+    background-color: #FBCFE8;
+}
+
+h1{
+    margin: 2% 0% 3% 0%;
+    height: 7%;
+}
+
+input{
+    width: 12%;
+    cursor: pointer;
+    padding: 0.5%;
+    background-color:rgb(255,255,255, 0.6);
+    outline: none;
+    border: 1px solid;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button{
+    margin-top: 3%;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.4%;
+    width: 5%;
+    color: white;
+    background-color: black;
+    border-style: none;
+    border-radius: 20px;
+}
+
+button:hover{
+    transform: scale(1.04);
+}
+
+div{
+    margin-top: 5%;
+    width: 35%;
+    text-align: center;
+    font-size: 1.5rem;
+}
