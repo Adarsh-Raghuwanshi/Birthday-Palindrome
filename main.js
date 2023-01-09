@@ -84,19 +84,10 @@ function handleDate(date){
 }
 
 function findNearPalindrome(date){
-    let count1 = 0, count2 = 0, nextPalindromeDate, prevPalindromeDate, check;
+    let nextCount = 0, prevCount = 0, nextPalindromeDate, prevPalindromeDate, check;
 
     while(1){
-        count1++;
-        date = changeDate(date, "nextDate");
-        check = handleDate(date);
-        if(check[0]){
-            nextPalindromeDate = check[1];
-            break;
-        }
-    }
-    while(1){
-        count2++;
+        prevCount++;
         date = changeDate(date, "prevDate");
         check = handleDate(date);
         if(check[0]){
@@ -104,7 +95,16 @@ function findNearPalindrome(date){
             break;
         }
     }
-    return [count1, count2, nextPalindromeDate, prevPalindromeDate];
+    while(1){
+        nextCount++;
+        date = changeDate(date, "nextDate");
+        check = handleDate(date);
+        if(check[0]){
+            nextPalindromeDate = check[1];
+            break;
+        }
+    }
+    return [nextCount, prevCount, nextPalindromeDate, prevPalindromeDate];
 }
 
 function clickHandler(){
